@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import $ from '../node_modules/jquery/dist/jquery.js';
+
+document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
+
+// スクロールを無効にする
+$(window).on('touchmove.noScroll', function(e) {
+    e.preventDefault();
+});
+
+// スクロール無効を解除する
+$(window).off('.noScroll');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
