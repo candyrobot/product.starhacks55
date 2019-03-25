@@ -7,14 +7,6 @@ import $ from '../node_modules/jquery/dist/jquery.js';
 
 document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 
-// スクロールを無効にする
-$(window).on('touchmove.noScroll', function(e) {
-    e.preventDefault();
-});
-
-// スクロール無効を解除する
-$(window).off('.noScroll');
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
