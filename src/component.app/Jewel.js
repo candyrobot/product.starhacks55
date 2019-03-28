@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Jewel.css';
 
 export default class Jewel extends Component {
   render() {
